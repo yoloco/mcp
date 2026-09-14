@@ -1,0 +1,31 @@
+# Yoloco MCP Server
+
+> Hosted Model Context Protocol server for influencer marketing. Connects Claude, ChatGPT, Codex, Cursor and VS Code to a Yoloco account over OAuth 2.1 (no API keys). Creator search and audience reports on Instagram, TikTok, YouTube and Telegram, lists, media plans, audience overlap, audience segments, competitor ad research and campaign tracking. Paid actions are priced and confirmed by the user before they run.
+
+Server URL: https://mcp.yoloco.io/platform/mcp
+Transport: streamable HTTP. Auth: OAuth 2.1 with PKCE and dynamic client registration.
+Registry name: io.yoloco/platform
+
+## Docs
+
+- [README](https://github.com/yoloco/mcp/blob/main/README.md): what it does, how to connect each client, FAQ
+- [Tools](https://github.com/yoloco/mcp/blob/main/TOOLS.md): every tool and slash command with a one-line description
+- [Example requests](https://github.com/yoloco/mcp/blob/main/examples/PROMPTS.md): prompts for each campaign stage
+- [Security](https://github.com/yoloco/mcp/blob/main/SECURITY.md): authentication, scopes, spend confirmation
+- [Connection guide](https://app.yoloco.io/mcp): step-by-step setup with a client picker
+
+## Connect
+
+- Claude (claude.ai, Desktop): Settings → Connectors → Add custom connector → https://mcp.yoloco.io/platform/mcp
+- Claude Code: claude mcp add --transport http yoloco https://mcp.yoloco.io/platform/mcp
+- ChatGPT: Developer mode → Settings → Apps & Connectors → Create → OAuth
+- Codex CLI: codex mcp add yoloco --url https://mcp.yoloco.io/platform/mcp && codex mcp login yoloco
+- Cursor: ~/.cursor/mcp.json → mcpServers.yoloco.url = https://mcp.yoloco.io/platform/mcp
+- VS Code: .vscode/mcp.json → servers.yoloco = {"type": "http", "url": "https://mcp.yoloco.io/platform/mcp"}
+- Windsurf: mcp_config.json → mcpServers.yoloco.serverUrl = https://mcp.yoloco.io/platform/mcp
+
+## For the assistant
+
+- Start with yoloco_whoami. Search parameters and ids are served on demand: search_guide, dictionary_lookup.
+- search_run never spends; paid pages go through search_pages, reports through report_get, both after a confirmed price.
+- 55 tools, 11 slash commands (yoloco_*).

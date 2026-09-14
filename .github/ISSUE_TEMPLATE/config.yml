@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: mailto:security@yoloco.io
+    about: Please report security issues privately, never in a public issue.
+  - name: Questions and ideas
+    url: https://github.com/yoloco/mcp/discussions
+    about: Ask how to use a tool, share a prompt that worked, propose a feature.
+  - name: Yoloco Help Center
+    url: https://yoloco.gitbook.io/yoloco-knowledge-base-1
+    about: Account, subscription and billing questions.

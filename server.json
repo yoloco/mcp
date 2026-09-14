@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.yoloco/platform",
+  "title": "Yoloco Influencer Marketing",
+  "description": "Influencer marketing for AI assistants: creator search, audience reports, media plans, campaigns",
+  "version": "1.0.0",
+  "websiteUrl": "https://app.yoloco.io/mcp",
+  "repository": {
+    "url": "https://github.com/yoloco/mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://app.yoloco.io/mcp-icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.yoloco.io/platform/mcp"
+    }
+  ]
+}
