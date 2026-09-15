@@ -3,7 +3,7 @@
   "name": "io.yoloco/platform",
   "title": "Yoloco Influencer Marketing",
   "description": "Influencer marketing for AI assistants: creator search, audience reports, media plans, campaigns",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "websiteUrl": "https://app.yoloco.io/mcp",
   "repository": {
     "url": "https://github.com/yoloco/mcp",

@@ -1,6 +1,6 @@
 # Tool catalogue
 
-55 tools and 11 slash commands, as the server reports them on `tools/list` and `prompts/list`. Names are stable; descriptions here are the first line of what the assistant sees.
+58 tools and 14 slash commands, as the server reports them on `tools/list` and `prompts/list`. Names are stable; descriptions here are the first line of what the assistant sees.
 
 Every tool that spends coins returns the price first and runs only after you confirm it in the chat; search parameters, dictionaries and product rules are served on demand (`search_guide`, `dictionary_lookup`, `product_guide`) instead of living in every tool schema.
 
@@ -14,11 +14,13 @@ Every tool that spends coins returns the price first and runs only after you con
 | `search_guide` | How to search one network: the policy, every search parameter with its type and units, the dictionaries. FREE. | Free, read-only |
 | `product_guide` | What an audience overlap, segment, campaign or competitor report gives, when to propose it, its price and limits on this plan. FREE. | Free, read-only |
 
-## Briefs and search (9)
+## Briefs and search (11)
 
 | Tool | What it does | Effect |
 |---|---|---|
-| `search_strategy` | A search plan across networks for a brief, with what reaching the target costs. FREE. Call before searching. | Free, read-only |
+| `search_strategy` | A search plan: strategies per network, sized and previewed free, the finds ranked. FREE. | Free, read-only |
+| `search_plan_run` | Run a search plan: more free rows, look-alikes of the best, one ranked list; paid pages and reports after a yes. | Spends coins after you confirm the price |
+| `search_feedback` | Record whether a found blogger fits: the team's rankings and strategy weights learn from it. FREE. | Free, changes your workspace |
 | `dictionary_lookup` | Ids for search filters: geos, languages, topics, categories, interests, relevant tags, universities, users. FREE. | Free, read-only |
 | `search_run` | Search one network's bloggers with the team's status on each row. FREE: never spends coins. | Free, read-only |
 | `search_pages` | Open several search pages at once, paid ones after the person confirms the price, and optionally put them into a list. | Spends coins after you confirm the price |
@@ -36,7 +38,7 @@ Every tool that spends coins returns the price first and runs only after you con
 | `report_cost` | What opening full reports would cost, before anything is opened. FREE. | Free, read-only |
 | `report_get` | A blogger's full report, compact: profile, KPIs, growth, audience, posts, contacts, quality and ads, benchmark. COSTS COINS unless already opened. | Spends coins after you confirm the price |
 | `creator_compare` | Up to 10 bloggers side by side: ER, views, audience, quality, growth, CPM at the media plan price. FREE, spends nothing. | Free, read-only |
-| `team_activity` | What colleagues already did: reports opened recently, likes, discussed bloggers, comments. FREE. | Free, read-only |
+| `team_activity` | What colleagues already did: who did what, reports opened recently, likes, discussed bloggers, comments. FREE. | Free, read-only |
 | `blogger_note` | Mark a blogger as liked for the whole team (idempotent), remove the mark, or leave a comment colleagues see in the app. FREE. | Free, changes your workspace |
 
 ## Lists (6)
@@ -48,7 +50,7 @@ Every tool that spends coins returns the price first and runs only after you con
 | `list_create` | Create a list for candidates, or a folder to group lists. FREE. | Free, changes your workspace |
 | `list_add` | Put bloggers into a list on the server, from ids or straight from a search, look-alikes, a segment or a competitor report. FREE. | Free, changes your workspace |
 | `list_remove` | Remove up to 100 bloggers from a list. FREE. Other lists and media plans are untouched. | Free, changes your workspace |
-| `list_refresh` | Refresh the stored data of every blogger in a list, in the background. COSTS COINS on Instagram, TikTok, YouTube. | Spends coins after you confirm the price |
+| `list_refresh` | Fill in or update the numbers of every blogger in a list, in the background, as the app's Refresh data does. FREE. | Free, changes your workspace |
 
 ## Media plans (6)
 
@@ -114,18 +116,27 @@ Every tool that spends coins returns the price first and runs only after you con
 | `workspace_update` | Rename a list, folder, media plan, segment, campaign or competitor report, or change its description or colour. FREE. | Free, changes your workspace |
 | `workspace_remove` | Delete a list, folder, media plan, overlap or segment, archive a campaign or competitor report, or stop a campaign. Asks for a yes first. | Asks first: cannot be undone |
 
+## Other (1)
+
+| Tool | What it does | Effect |
+|---|---|---|
+| `niche_lookup` | A catalog niche (the brief's niche.primary) and how it is searched per network, or the closest ones. FREE. | Free, read-only |
+
 ## Slash commands (prompts)
 
 | Command | What it does |
 |---|---|
 | `/yoloco_start` | Where to start: account, balance, an unfinished brief, the menu. |
-| `/yoloco_menu` | The menu: what can be done here, with live counts. |
-| `/yoloco_find` | Find bloggers: a brief one question at a time, a search plan, free previews, a list, finalists. |
+| `/yoloco_menu` | The menu: the jobs to run and what the team built, with live counts. |
+| `/yoloco_find` | Find bloggers: the market first, a brief one question at a time, a search plan, a list, quick actions. |
+| `/yoloco_mediaplan` | A media plan from a list or pasted bloggers: the price, adding in the background, prices and CPM. |
+| `/yoloco_quality` | Check pasted bloggers or a list: doubtful metrics, publics and shops, audience quality, a verdict each. |
+| `/yoloco_overlap` | Audience overlap of a list, a media plan or pasted bloggers: the calculation and the best set. |
+| `/yoloco_tracking` | Start tracking published posts from links or a media plan, then show the first results. |
+| `/yoloco_segment` | Segment super search: bloggers by their audience's interests, codes, building, quick actions. |
+| `/yoloco_team` | What each colleague did: reports and coins, bloggers opened, searches, who was idle. |
+| `/yoloco_daily` | The daily briefing: campaigns since yesterday and what the team did, with actions for today. |
+| `/yoloco_competitors` | Quick Sponsorship: who advertised pasted brands or a category's top brands on a network. |
 | `/yoloco_pick` | Go through a list: whom to keep, whom to drop. |
-| `/yoloco_mediaplan` | A media plan from a list: the price, adding in the background, totals, prices and CPM, export. |
-| `/yoloco_overlap` | Audience overlap of finalists: whether it is worth it, the calculation, the best set. |
-| `/yoloco_segment` | Bloggers by their audience's interests: codes, limits, building. |
 | `/yoloco_campaign` | The whole cycle from a brief to a tracked campaign, with a checkpoint before every spend. |
-| `/yoloco_campaign_daily` | The morning look at campaigns: what changed and what to do. |
-| `/yoloco_competitors` | Who advertised a brand or its competitors: keywords, the report, posts, channels. |
 | `/yoloco_balance` | Balance, a month of spending, and how to save coins. |

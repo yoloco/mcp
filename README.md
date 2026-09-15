@@ -3,7 +3,7 @@
 [![MCP](https://img.shields.io/badge/MCP-remote%20server-6071FF)](https://modelcontextprotocol.io)
 [![Auth](https://img.shields.io/badge/auth-OAuth%202.1-2ea44f)](SECURITY.md)
 [![Networks](https://img.shields.io/badge/networks-Instagram%20%C2%B7%20TikTok%20%C2%B7%20YouTube%20%C2%B7%20Telegram-555)](#what-you-can-do)
-[![Tools](https://img.shields.io/badge/tools-55-555)](TOOLS.md)
+[![Tools](https://img.shields.io/badge/tools-58-555)](TOOLS.md)
 
 **Yoloco MCP Server** is a hosted [Model Context Protocol](https://modelcontextprotocol.io) server that
 lets an AI assistant run influencer marketing on real creator data. Connect Claude, ChatGPT or Codex
@@ -45,21 +45,25 @@ Then ask:
 > Find 20 beauty creators in Berlin with 50k to 200k followers and a real audience, then put the best
 > ones into a media plan.
 
+Not sure where to start? Ask for the menu or type `/yoloco_menu`: nine ready jobs, from finding creators to a
+daily briefing, each one a single number to pick.
+
 More ready-made requests for each stage of a campaign: [examples/PROMPTS.md](examples/PROMPTS.md).
 
 ## What you can do
 
 | Stage | What the assistant does |
 |---|---|
-| **Brief** | Asks the missing questions one at a time and turns the answers into a search plan with a coin budget per network. |
-| **Discovery** | Searches creators on Instagram, TikTok, YouTube and Telegram by audience geo, language, age and gender, audience quality, ad readiness and topic. Free previews, look-alikes of creators you already trust on every network, saved searches. |
-| **Vetting** | Full creator reports: audience demographics and quality, suspicious followers, growth, engagement, sponsored posts, contacts for outreach, ad frequency and expected ad views on Telegram. Side-by-side comparison of finalists from reports your team already opened, reused for free. |
-| **Shortlists** | Lists and folders shared with the team, likes and comments, "who already looked at this creator". |
+| **Brief** | Asks where the audience is first, never guessing it: a region, a market or a country (Europe → DACH → Germany, 199 countries). Then the missing questions one at a time, turned into a search plan with a coin budget per network. |
+| **Discovery** | Searches creators on Instagram, TikTok, YouTube and Telegram by audience geo, language, age and gender, audience quality, ad readiness and topic. A smart search runs several strategies per network for free and returns one ranked list with the reasons each creator fits and flags for doubtful metrics, public pages and shops. Look-alikes of creators you already trust, saved searches. Every creator and post comes with a link. |
+| **Vetting** | Paste a list of links and get a quality verdict on each: doubtful metrics, public pages and shops at once, audience quality from full reports. Full creator reports: audience demographics and quality, suspicious followers, growth, engagement, sponsored posts, contacts for outreach, ad frequency and expected ad views on Telegram. Side-by-side comparison of finalists from reports your team already opened, reused for free. |
+| **Shortlists** | Lists and folders shared with the team, a list of the creators you picked in one step with their numbers filled in, free refresh of a list's data, likes and comments, "who already looked at this creator". |
 | **Media plans** | Totals of reach, engagement, audience and prices; negotiated prices per creator with planned CPM before booking; Excel and PDF export. |
 | **Audience overlap** | How many followers your finalists share, how much reach is really unique, and which set to keep for a number of creators or a budget (Instagram, TikTok, YouTube). |
 | **Audience segments** | Instagram creators whose audience is interested in a topic, built from a plain-language description. |
-| **Competitor ads** | Which creators a brand sponsored on YouTube and Telegram, how often, and how those posts performed. |
-| **Campaign tracking** | A campaign straight from the media plan with its prices; views, engagement, cost and CPM of published posts, plan against fact per creator, and a morning brief with alerts. |
+| **Competitor ads** | Which creators a brand sponsored on YouTube and Telegram, how often, and how those posts performed. Who keeps coming back to a brand (repeat placements, long-term partners) and who works with several competitors. Several brands described at once, or a category's top brands. |
+| **Campaign tracking** | A campaign straight from post links or the media plan with its prices; views, engagement, cost and CPM of published posts, plan against fact per creator, and a daily briefing with alerts. |
+| **Team** | What each colleague did: reports opened, coins spent, creators looked at, searches, who has been idle. |
 
 Full list of tools and slash commands: [TOOLS.md](TOOLS.md).
 

@@ -26,6 +26,9 @@ Registry name: io.yoloco/platform
 
 ## For the assistant
 
-- Start with yoloco_whoami. Search parameters and ids are served on demand: search_guide, dictionary_lookup.
+- Start with yoloco_whoami; when the person does not say what to do, yoloco_menu (nine jobs, each returns its steps).
+- Ask where the audience is before any search: a region, a market or a country (brief_get view=geo); never assume it.
+- Search parameters and ids are served on demand: search_guide, dictionary_lookup.
 - search_run never spends; paid pages go through search_pages, reports through report_get, both after a confirmed price.
-- 55 tools, 11 slash commands (yoloco_*).
+- Every creator and post in answers has a url: show them as links.
+- 58 tools, 14 slash commands (yoloco_*).
